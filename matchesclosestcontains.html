@@ -1,0 +1,37 @@
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+  <div id="parent" class="box">
+    <p id="child" class="text">
+      Hello JavaScript
+    </p>
+  </div>
+
+  <script>
+    let parent = document.getElementById("parent");
+    let child = document.getElementById("child");
+
+    // 1. matches()
+    console.log(child.matches(".text"));
+    // Output: true
+
+    console.log(child.matches("#parent"));
+    // Output: false
+
+    // 2. closest()
+    console.log(child.closest(".box"));
+    // Output: parent wala div element
+
+    // 3. contains()
+    console.log(parent.contains(child));
+    // Output: true
+
+    console.log(child.contains(parent));
+    // Output: false
+  </script>
+
+</body>
+</html>

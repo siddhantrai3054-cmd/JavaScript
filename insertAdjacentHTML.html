@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+  <div id="box">
+    <p>Apple</p>
+  </div>
+
+  <script>
+    let box = document.getElementById("box");
+
+    // 1. Element ke bahar, pehle
+    box.insertAdjacentHTML(
+      "beforebegin",
+      "<p>Orange</p>"
+    );
+
+    // 2. Element ke andar, sabse pehle
+    box.insertAdjacentHTML(
+      "afterbegin",
+      "<p>Banana</p>"
+    );
+
+    // 3. Element ke andar, sabse last mein
+    box.insertAdjacentHTML(
+      "beforeend",
+      "<p>Mango</p>"
+    );
+
+    // 4. Element ke bahar, baad mein
+    box.insertAdjacentHTML(
+      "afterend",
+      "<p>Grapes</p>"
+    );
+  </script>
+
+</body>
+</html>

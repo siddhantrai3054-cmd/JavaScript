@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+  <h2 id="heading">Hello!</h2>
+
+  <button onclick="startInterval()">Start Interval</button>
+  <button onclick="stopInterval()">Stop Interval</button>
+
+  <script>
+    // setTimeout(): Function runs only once after 3 seconds
+    setTimeout(function () {
+      console.log("This message appears after 3 seconds");
+    }, 3000);
+
+
+    // setInterval(): Function runs repeatedly every 2 seconds
+    let timer;
+
+    function startInterval() {
+      if (timer) return;
+
+      timer = setInterval(function () {
+        document.getElementById("heading").innerText =
+          "Hello! " + new Date().toLocaleTimeString();
+      }, 2000);
+    }
+
+    // clearInterval(): Stops the repeated execution
+    function stopInterval() {
+      clearInterval(timer);
+      timer = null;
+    }
+  </script>
+
+</body>
+</html>

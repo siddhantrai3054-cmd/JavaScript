@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+  <h2 id="heading">Hello World</h2>
+
+  <p id="para">This is old text.</p>
+
+  <img id="photo" src="old.jpg" alt="Old image">
+
+  <script>
+    // 1. Change HTML content
+    document.getElementById("heading").innerHTML =
+      "<i>Welcome to JavaScript</i>";
+
+    // 2. Change text content
+    document.getElementById("para").textContent =
+      "This is new text.";
+
+    // 3. Change an attribute
+    document.getElementById("photo").setAttribute(
+      "alt", "New image"
+    );
+
+    // 4. Replace the complete element
+    // Uncomment this line to see the effect:
+    // document.getElementById("para").outerHTML =
+    //   "<h3>New Heading</h3>";
+  </script>
+
+</body>
+</html>

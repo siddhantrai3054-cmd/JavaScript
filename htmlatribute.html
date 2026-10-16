@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+  <img id="photo" src="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcQ1vV_f18rJFJ99gIKzMXgOuyzrtjlyyylfeoTsnxp3QrOCidc4GcLJrzHiaFJjPQibKp6dwWD3_eqeaJM" alt="My Photo">
+
+  <script>
+    let img = document.getElementById("photo");
+
+    // 1. Attribute ki value dekhna
+    console.log(img.getAttribute("src"));
+
+    // 2. Attribute ki value badalna
+    img.setAttribute("src", "new.jpg");
+
+    // 3. Check karna ki attribute hai ya nahi
+    console.log(img.hasAttribute("alt"));
+
+    // 4. Attribute hatana
+    img.removeAttribute("alt");
+  </script>
+
+</body>
+</html>

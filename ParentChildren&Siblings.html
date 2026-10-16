@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Parent Children Siblings</title>
+</head>
+<body>
+
+    <div id="parent">
+        <h1 id="heading">Apple</h1>
+        <p id="para1">Mango</p>
+        <button id="btn">Orange</button>
+    </div>
+
+    <script>
+        // 1. PARENT
+        // Definition: Element ke andar doosre elements hote hain.
+        // Example: div is the parent of h1, p and button.
+
+        let parent = document.getElementById("parent");
+
+        console.log("Parent:", parent);
+
+
+        // 2. CHILDREN
+        // Definition: Parent ke andar ke saare HTML elements.
+
+        console.log("Children:", parent.children);
+
+
+        // 3. FIRST ELEMENT CHILD
+        // Definition: Parent ka pehla HTML element.
+
+        console.log("First Child:", parent.firstElementChild);
+        // Output: h1 (Apple)
+
+
+        // 4. LAST ELEMENT CHILD
+        // Definition: Parent ka aakhri HTML element.
+
+        console.log("Last Child:", parent.lastElementChild);
+        // Output: button (Orange)
+
+
+        // 5. CHILD ELEMENT COUNT
+        // Definition: Total child HTML elements ki sankhya.
+
+        console.log("Total Children:", parent.childElementCount);
+        // Output: 3
+
+
+        // 6. PARENT ELEMENT
+        // Definition: Kisi element ka parent return karta hai.
+
+        let mango = document.getElementById("para1");
+
+        console.log("Mango Parent:", mango.parentElement);
+        // Output: div
+
+
+        // 7. NEXT ELEMENT SIBLING
+        // Definition: Agla HTML element return karta hai.
+
+        console.log("Next Element:", mango.nextElementSibling);
+        // Output: button (Orange)
+
+
+        // 8. PREVIOUS ELEMENT SIBLING
+        // Definition: Pichhla HTML element return karta hai.
+
+        console.log("Previous Element:", mango.previousElementSibling);
+        // Output: h1 (Apple)
+
+
+        // 9. CHILD NODES
+        // Definition: Saare child nodes return karta hai.
+        // Isme text nodes aur HTML elements bhi ho sakte hain.
+
+        console.log("Child Nodes:", parent.childNodes);
+
+
+        // 10. FIRST CHILD
+        // Definition: Pehla child node return karta hai.
+        // Whitespace hone par ye text node ho sakta hai.
+
+        console.log("First Child Node:", parent.firstChild);
+
+
+        // 11. LAST CHILD
+        // Definition: Aakhri child node return karta hai.
+
+        console.log("Last Child Node:", parent.lastChild);
+
+
+        // 12. PARENT NODE
+        // Definition: Parent node return karta hai.
+
+        console.log("Parent Node:", mango.parentNode);
+
+
+        // 13. NEXT SIBLING
+        // Definition: Agla node return karta hai.
+        // Ye text node bhi ho sakta hai.
+
+        console.log("Next Sibling Node:", mango.nextSibling);
+
+
+        // 14. PREVIOUS SIBLING
+        // Definition: Pichhla node return karta hai.
+        // Ye text node bhi ho sakta hai.
+
+        console.log("Previous Sibling Node:", mango.previousSibling);
+
+
+        // 15. ACCESS CHILD BY INDEX
+        // Definition: Index ki help se specific child access karna.
+        // Index 0 se start hota hai.
+
+        console.log("Child 0:", parent.children[0]);
+        // h1 (Apple)
+
+        console.log("Child 1:", parent.children[1]);
+        // p (Mango)
+
+        console.log("Child 2:", parent.children[2]);
+        // button (Orange)
+
+    </script>
+
+</body>
+</html>

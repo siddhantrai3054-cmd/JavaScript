@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+    <div id="parent">
+        <h1>Apple</h1>
+        <p>Mango</p>
+        <button>Orange</button>
+    </div>
+
+    <script>
+        let parent = document.getElementById("parent");
+        let mango = document.querySelector("p");
+
+        // 1. children
+        // Definition: Parent ke saare child HTML elements deta hai.
+        console.log("All Children:", parent.children);
+
+        // 2. firstElementChild
+        // Definition: Parent ka first HTML element deta hai.
+        console.log("First Child:", parent.firstElementChild);
+        // Output: h1 (Apple)
+
+        // 3. lastElementChild
+        // Definition: Parent ka last HTML element deta hai.
+        console.log("Last Child:", parent.lastElementChild);
+        // Output: button (Orange)
+
+        // 4. nextElementSibling
+        // Definition: Current element ke baad wala HTML element deta hai.
+        console.log("Next Element:", mango.nextElementSibling);
+        // Output: button (Orange)
+
+        // 5. previousElementSibling
+        // Definition: Current element se pehle wala HTML element deta hai.
+        console.log("Previous Element:", mango.previousElementSibling);
+        // Output: h1 (Apple)
+
+        // 6. parentElement
+        // Definition: Current element ka parent HTML element deta hai.
+        console.log("Parent:", mango.parentElement);
+        // Output: div
+
+        // 7. childElementCount
+        // Definition: Total child HTML elements ki counting deta hai.
+        console.log("Total Children:", parent.childElementCount);
+        // Output: 3
+    </script>
+
+</body>
+</html>

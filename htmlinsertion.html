@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+  <div id="box">
+    <p id="apple">Apple</p>
+  </div>
+
+  <script>
+    let box = document.getElementById("box");
+    let apple = document.getElementById("apple");
+
+    // 1. append()
+    // Definition: Adds content at the end inside an element.
+    let a = document.createElement("p");
+    a.innerText = "Mango";
+    box.append(a);
+
+    // 2. prepend()
+    // Definition: Adds content at the beginning inside an element.
+    let b = document.createElement("p");
+    b.innerText = "Banana";
+    box.prepend(b);
+
+    // 3. before()
+    // Definition: Adds content just before an element.
+    let c = document.createElement("p");
+    c.innerText = "Orange";
+    apple.before(c);
+
+    // 4. after()
+    // Definition: Adds content just after an element.
+    let d = document.createElement("p");
+    d.innerText = "Grapes";
+    apple.after(d);
+
+  </script>
+
+</body>
+</html>

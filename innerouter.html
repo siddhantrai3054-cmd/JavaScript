@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+    <div id="box">
+        <p>Hello Siddhant</p>
+    </div>
+
+    <script>
+        let box = document.getElementById("box");
+
+        // 1. innerHTML
+        // Definition: Element ke andar ka HTML content
+        // dekhne ya change karne ke liye use hota hai.
+
+        console.log("Inner HTML:", box.innerHTML);
+        // Output: <p>Hello Siddhant</p>
+
+
+        // 2. outerHTML
+        // Definition: Poore element ko uske tags aur
+        // andar ke content ke saath return karta hai.
+
+        console.log("Outer HTML:", box.outerHTML);
+        // Output: <div id="box"><p>Hello Siddhant</p></div>
+
+
+        // 3. innerHTML se content change karna
+
+        box.innerHTML = "<h1>Welcome</h1>";
+        // Ab div ke andar Welcome heading hai.
+
+
+        // 4. outerHTML se poora element replace karna
+
+        box.outerHTML = "<h2>New Element</h2>";
+        // Poora div replace hokar h2 ban jayega.
+
+    </script>
+
+</body>
+</html>

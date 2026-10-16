@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Traversing</title>
+</head>
+<body>
+
+    <div id="parent">
+        <h1 id="heading">JavaScript</h1>
+        <p id="para1">Learn DOM</p>
+        <p id="para2">Learn JavaScript</p>
+        <button id="btn">Click Me</button>
+    </div>
+
+    <script>
+
+        // 1. PARENT ELEMENT
+        // Definition: The element that contains another element.
+        // Example: div is the parent of h1, p and button.
+
+        let parent = document.getElementById("parent");
+
+        console.log("Parent:", parent);
+
+
+        // 2. CHILDREN
+        // Definition: All child HTML elements of a parent.
+        // Example: h1, p, p and button.
+
+        console.log("Children:", parent.children);
+
+
+        // 3. FIRST ELEMENT CHILD
+        // Definition: Returns the first child HTML element.
+
+        console.log("First Child:", parent.firstElementChild);
+
+
+        // 4. LAST ELEMENT CHILD
+        // Definition: Returns the last child HTML element.
+
+        console.log("Last Child:", parent.lastElementChild);
+
+
+        // 5. CHILD ELEMENT COUNT
+        // Definition: Returns the total number of child elements.
+
+        console.log("Child Count:", parent.childElementCount);
+
+
+        // 6. CHILD NODES
+        // Definition: Returns all child nodes, including text nodes
+        // and elements. Whitespace may also count as a text node.
+
+        console.log("Child Nodes:", parent.childNodes);
+
+
+        // 7. PARENT ELEMENT
+        // Definition: Returns the parent HTML element of an element.
+
+        let heading = document.getElementById("heading");
+
+        console.log("Heading Parent:", heading.parentElement);
+
+
+        // 8. NEXT ELEMENT SIBLING
+        // Definition: Returns the next HTML element at the same level.
+
+        let para1 = document.getElementById("para1");
+
+        console.log("Next Sibling:", para1.nextElementSibling);
+
+
+        // 9. PREVIOUS ELEMENT SIBLING
+        // Definition: Returns the previous HTML element at the same level.
+
+        let para2 = document.getElementById("para2");
+
+        console.log("Previous Sibling:", para2.previousElementSibling);
+
+
+        // 10. FIRST CHILD NODE
+        // Definition: Returns the first child node, which can be text.
+
+        console.log("First Child Node:", parent.firstChild);
+
+
+        // 11. LAST CHILD NODE
+        // Definition: Returns the last child node, which can be text.
+
+        console.log("Last Child Node:", parent.lastChild);
+
+
+        // 12. PARENT NODE
+        // Definition: Returns the parent node, which may be an element
+        // or another kind of node.
+
+        console.log("Parent Node:", heading.parentNode);
+
+
+        // 13. NEXT SIBLING
+        // Definition: Returns the next node, which may be text or an element.
+
+        console.log("Next Sibling Node:", para1.nextSibling);
+
+
+        // 14. PREVIOUS SIBLING
+        // Definition: Returns the previous node, which may be text or an element.
+
+        console.log("Previous Sibling Node:", para2.previousSibling);
+
+
+        // 15. ACCESS A SPECIFIC CHILD USING INDEX
+        // Definition: children[index] accesses a child by its position.
+        // Index starts from 0.
+
+        console.log("Child 0:", parent.children[0]); // h1
+        console.log("Child 1:", parent.children[1]); // First p
+        console.log("Child 2:", parent.children[2]); // Second p
+        console.log("Child 3:", parent.children[3]); // button
+
+    </script>
+
+</body>
+</html>
